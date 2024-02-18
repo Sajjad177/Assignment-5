@@ -103,7 +103,7 @@
                             <div class="flex">
                                 <button class="btn bg-[#1DD10026] text-[#1DD100] pr-4">
                                     <img src="images/seat-green.png" alt="">
-                                    <span>40</span><p>seats left</p>
+                                    <span id="total-seat">8</span><p>seats left</p>
                                 </button>
                             </div>
                             
@@ -140,7 +140,7 @@
         </section>
         <section class="mt-10 bg-[#FFFFFF] rounded-2xl">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10"> <!--? main div -->
-                <div class="p-16"> <!--? first div -->
+                <div class="p-20"> <!--? first div -->
                     <div class="space-y-4">
                         <h1 class="font-bold">select Your seat</h1>
                         <hr>
@@ -157,97 +157,20 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="pt-10">
-                        <div class="flex justify-end">
+                    <div class="pt-10 relative">
+                        <div class="absolute lg:right-10 right-2">
                             <button class="btn "><img src="images/wheel.png" alt=""></button>
                         </div>
-                        <div class="flex justify-center lg:gap-36 gap-6 mt-10">
-                            <h4 class="flex items-center">A</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn" class="btn">A1</button>
-                                <button id="btn"  class="btn">A2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">A3</button>
-                                <button id="btn"  class="btn">A4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-6 mt-10">
-                            <h4 class="flex items-center">B</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">B1</button>
-                                <button id="btn"  class="btn">B2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">B3</button>
-                                <button id="btn"  class="btn">B4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-6 mt-10">
-                            <h4 class="flex items-center">C</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">C1</button>
-                                <button id="btn"  class="btn">C2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">C3</button>
-                                <button id="btn"  class="btn">C4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-5 mt-10">
-                            <h4 class="flex items-center">D</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">D1</button>
-                                <button id="btn"  class="btn">D2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">D3</button>
-                                <button id="btn"  class="btn">D4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-6 mt-10">
-                            <h4 class="flex items-center">E</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn" class="btn">E1</button>
-                                <button id="btn"  class="btn">E2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">E3</button>
-                                <button id="btn"  class="btn">E4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-6 mt-10">
-                            <h4 class="flex items-center">F</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">F1</button>
-                                <button id="btn"  class="btn">F2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">F3</button>
-                                <button id="btn"  class="btn">F4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-5 mt-10">
-                            <h4 class="flex items-center">G</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">G1</button>
-                                <button id="btn"  class="btn">G2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">G3</button>
-                                <button id="btn"  class="btn">G4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-center lg:gap-36 gap-5 mt-10">
-                            <h4 class="flex items-center">H</h4>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">H1</button>
-                                <button id="btn"  class="btn">H2</button>
-                            </div>
-                            <div class="lg:space-x-10">
-                                <button id="btn"  class="btn">H3</button>
-                                <button id="btn"  class="btn">H4</button>
-                            </div>
+                        <div class="text-center mt-14 space-y-2">
+                            <button id="btn" class="btn px-10 ">A1</button>
+                            <button id="btn" class="btn px-10">A2</button>
+                            <button id="btn" class="btn lg:ml-20 px-10">A3</button>
+                            <button id="btn" class="btn px-10 ">A4</button>
+                            <br>
+                            <button id="btn" class="btn px-10">B1</button>
+                            <button id="btn" class="btn px-10 ">B2</button>
+                            <button id="btn" class="btn  lg:ml-20 px-10">B3</button>
+                            <button id="btn" class="btn px-10">B4</button>
                         </div>
                     </div>
                 </div>
@@ -261,16 +184,16 @@
                         <h2>Price</h2>
                     </div>
                     <hr>
-                    <ul id="select-place-container" class="flex pl-24 gap-32 m-auto">
+                    <ul id="select-place-container">
                         
                     </ul>
                     <hr>
                     <div class="flex justify-around gap-36 pt-3">
                         <h1 class="font-bold">Total Price</h1>
-                        <p id="total-cost " class="font-bold">0</p>
+                        <p id="total-cost" class="font-bold">0</p>
                     </div>
                     <div class="text-center mt-5">
-                        <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs" />
+                        <input id="coupon-input" type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs" />
                         <button id="apply-btn" class="btn bg-[#1DD100] text-white w-full mt-5">Apply</button>
                     </div>
                     <div class="flex justify-around gap-36 pt-3">
