@@ -80,6 +80,7 @@ for(const btn of btnAll){
             removeHidden('success-screen');
         }else{
             alert('Invalid please check again');
+            location.reload();
         }
     })
 
@@ -92,7 +93,6 @@ for(const btn of btnAll){
         element.classList.remove('hidden');
     }
     
-// !set innerText : 
-function setInnerTextById(elementId,value){
-    document.getElementById(elementId).innerText = value;
-}
+    function setInnerTextById(elementId,value){
+        document.getElementById(elementId).innerText = value;
+    }

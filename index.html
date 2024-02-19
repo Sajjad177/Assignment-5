@@ -25,26 +25,28 @@
         <header>
             <div class="navbar bg-base-100 bg-[#F7F8F8]">
                 <div class="navbar-start">
-                  <a class="btn btn-ghost text-2xl font-bold">Get-online</a>
+                  <a class="btn btn-ghost text-2xl font-extrabold">Get-online</a>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn bg-[#1DD1001A] text-xl font-semibold text-[#1DD100]">Bus<img src="images/bus-icon.png" alt=""></a>
+                  <a class="btn bg-[#1DD1001A] text-xl font-bold text-[#1DD100]">Bus<img src="images/bus-icon.png" alt=""></a>
                 </div>
             </div>
         </header>
         <!--! banner section  -->
-        <div class="hero ">
-            <div>
-                <img src="images/banner.png" alt="">
-            </div>
-            <div class="text-center text-neutral-content">
-              <div class="">
-                <h1 class="lg:mb-5 text-xl lg:text-5xl font-bold ">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></h1>
-                <p class="lg:mb-5 text-sm">If you want an affordable and comfortable trip then you can join us.  You will reach your destination very quickly and safely.</p>
-                <button class="btn bg-[#1DD100] border-none font-extrabold"><a href="#poribohon">Buy Tickets</a></button>
+        <div class="">
+            <div class="hero">
+                <div>
+                    <img src="images/banner.png" alt="">
+                </div>
+                <div class="text-center text-neutral-content">
+                  <div class="">
+                    <h1 class="lg:mb-5 text-xl lg:text-5xl font-bold ">End-to-End Travel with <br><span class="text-[#1DD100]">Express</span></h1>
+                    <p class="lg:mb-5 text-sm">If you want an affordable and comfortable trip then you can join us.  You will reach your destination very quickly and safely.</p>
+                    <button class="btn bg-[#1DD100] border-none font-extrabold"><a href="#poribohon">Buy Tickets</a></button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+        </div>
     </section>
     <main class="container m-auto px-3 lg:pt-4 raleway inter">
         <!--! best offer section -->
@@ -95,14 +97,14 @@
                             <div class="">
                                 <h2 class="flex gap-2 font-bold lg:text-2xl">
                                     <img class="w-10" src="images/bus-logo.png" alt="">
-                                    Greenline Paribahan
+                                    Royal Express
                                 </h2>
                                 <p class="text-center">Coach-009-WEB ! AC_Business</p>
                             </div>
                             <div class="flex">
                                 <button class="btn bg-[#1DD10026] text-[#1DD100] pr-4">
                                     <img src="images/seat-green.png" alt="">
-                                    <span id="total-seat">8</span><p>seats left</p>
+                                    <span id="total-seat">40</span><p>seats left</p>
                                 </button>
                             </div>
                             
@@ -131,15 +133,16 @@
                                 <img src="images/fare.png" alt="">
                             </div>
                             <h1 class="text-4xl font-bold">550 Taka</h1>
-                            <h2 class="text-3xl font-semibold text-[#03071299]">Per seat</h2>
+                            <h2 class="text-3xl font-semibold text-textColor">Per seat</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!--! select seat section -->
         <section class="mt-10 bg-[#FFFFFF] rounded-2xl">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10"> <!--? main div -->
-                <div class="lg:p-20 p-14"> <!--? first div -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10"> 
+                <div class="lg:p-20 p-14"> 
                     <div class="space-y-4">
                         <h1 class="font-bold">select Your seat</h1>
                         <hr>
@@ -202,24 +205,24 @@
                             <button id="btn" class="btn px-10">H4</button>
                             <br>
                             <button id="btn" class="btn px-11 mr-7">I1</button>
-                            <button id="btn" class="btn px-11 ">I2</button>
-                            <button id="btn" class="btn  lg:ml-[82px] px-11 mr-8">I3</button>
+                            <button id="btn" class="btn lg:px-11 lg:mr-0 mr-2 px-10">I2</button>
+                            <button id="btn" class="btn  lg:ml-[82px] lg:px-11 px-10 mr-7">I3</button>
                             <button id="btn" class="btn px-11">I4</button>
                             <br>
-                            <button id="btn" class="btn px-11 mr-7">J1</button>
+                            <button id="btn" class="btn lg:px-11 px-10 mr-7">J1</button>
                             <button id="btn" class="btn px-11 ">J2</button>
-                            <button id="btn" class="btn  lg:ml-20 px-11 mr-7">J3</button>
-                            <button id="btn" class="btn px-11">J4</button>
+                            <button id="btn" class="btn  lg:ml-20 lg:px-11 px-10 mr-7">J3</button>
+                            <button id="btn" class="btn lg:px-11 lg:mr-0 mr-2 px-10">J4</button>
 
                         </div>
                     </div>
                 </div>
-                <div class="lg:pr-14 p-8 w-[433]">   <!--? second div -->
+                <div class="lg:pr-14 p-8 w-[433]">
                     <div class="bg-[#F7F8F8] rounded-xl p-10">
                         <h1 class="font-bold">select Your seat</h1>
                     <hr>
                     <div class="flex justify-around mt-10 mb-5">
-                        <h2>seat <span id="seat-count" class="bg-[#1DD100] rounded-full">0</span></h2>
+                        <h2>seat <span id="seat-count" class="bg-[#1DD100] rounded-full px-1">0</span></h2>
                         <h2>class</h2>
                         <h2>Price</h2>
                     </div>
@@ -269,6 +272,7 @@
                 
             </div>
         </section>
+        <!--! success screen section -->
         <section id="success-screen" class="hidden">
             <div class=" m-auto items-center text-center bg-[#FFFFFF] mt-12 w-96 p-10 rounded-xl relative -top-[90vh] shadow-lg shadow-[#03071283]">
                 <div class="flex justify-center">
@@ -283,6 +287,7 @@
             </div>
         </section>
     </main>
+                <!--! footer section -->
         <footer class="flex justify-around footer p-10 bg-black text-neutral-content mt-20 ">
             <aside>
                 <h1 class="lg:text-4xl text-2xl font-bold">Get-Online</h1>
