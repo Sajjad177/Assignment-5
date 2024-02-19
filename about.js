@@ -84,6 +84,13 @@ for(const btn of btnAll){
         }
     })
 
+    const continueBtn = document.getElementById('continue-btn');
+    continueBtn.addEventListener('click',function(){
+        window.location.reload();
+    })
+
+
+
     function addHidden(elementId){
         const element = document.getElementById(elementId);
         element.classList.add('hidden');
