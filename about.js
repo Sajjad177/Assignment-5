@@ -1,13 +1,13 @@
 const btnAll = document.querySelectorAll('#btn');
 let count = 0;
-let totalSeat = 8;
+let totalSeat = 40;
 let array = [];
 for(const btn of btnAll){
     btn.addEventListener('click',function(e){
         count++;
         totalSeat = totalSeat - 1;
         //! only select 4 seat
-        if(totalSeat < 4){
+        if(count > 4){
             alert('Maximum 4 seats selected');
             return;
         }
@@ -41,7 +41,7 @@ for(const btn of btnAll){
 
         
 
-        
+        finalBtn.removeAttribute('disabled','');
         setInnerTextById('total-seat',totalSeat);
         setInnerTextById('seat-count',count);
     })
@@ -75,27 +75,12 @@ for(const btn of btnAll){
     finalBtn.setAttribute('disabled','');
     finalBtn.addEventListener('click',function(){
         const phoneNum = document.getElementById('phone-input');
-        document.querySelectorAll('#btn');
         array.push(count);
-        // if(array > 0 && phoneNum.value){
-        //     finalBtn.removeAttribute('disabled','');
-        //     removeHidden('success-screen');
-        // }else{
-        //     finalBtn.disabled = true;
-        //     // location.reload();
-        //     alert('Invalid please check again');
-        // }
-        if(array > 0){
-            finalBtn.removeAttribute('disabled','');
+        if(array > 0 && phoneNum.value){
+            removeHidden('success-screen');
         }else{
-            if(array > 0 && phoneNum.value){
-                removeHidden('success-screen')
-            }else{
-                alert('Invalid please check again');
-            }
+            alert('Invalid please check again');
         }
-        
-        
     })
 
     function addHidden(elementId){
