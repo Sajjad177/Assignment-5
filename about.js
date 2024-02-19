@@ -1,6 +1,7 @@
 const btnAll = document.querySelectorAll('#btn');
 let count = 0;
 let totalSeat = 8;
+let array = [];
 for(const btn of btnAll){
     btn.addEventListener('click',function(e){
         count++;
@@ -10,7 +11,7 @@ for(const btn of btnAll){
             alert('Maximum 4 seats selected');
             return;
         }
-        e.target.style.color= 'black';
+        e.target.style.color= 'white';
         e.target.style.backgroundColor = '#1DD100';
         const seatName = e.target.innerText;
         e.target.disabled = true;
@@ -29,8 +30,6 @@ for(const btn of btnAll){
         ul.appendChild(p2);
         ul.appendChild(p3);
         
-
-
         const num = p3.innerText;
         const totalCost = document.getElementById('total-cost').innerText
         const convertTotalCost = parseInt(totalCost);
@@ -61,6 +60,9 @@ for(const btn of btnAll){
         }else if(couponApply === 'Couple 20'){
             const totalCost = document.getElementById('total-cost').innerText
             const total = totalCost * 0.2;
+            const discount = document.getElementById('discount');
+            discount.innerText = 'discount';
+            setInnerTextById('discount-price',total);
             const sum = totalCost - total;
             setInnerTextById('grand-total',sum);
         }else{
@@ -70,15 +72,30 @@ for(const btn of btnAll){
     })
 
     const finalBtn = document.getElementById('final-btn');
+    finalBtn.setAttribute('disabled','');
     finalBtn.addEventListener('click',function(){
-        const btnAll = document.querySelectorAll('#btn');
-        const PhoneNum = document.getElementById('phone-input')
-        if(btnAll && PhoneNum.value){
-            removeHidden('confarm-btn');
+        const phoneNum = document.getElementById('phone-input');
+        document.querySelectorAll('#btn');
+        array.push(count);
+        // if(array > 0 && phoneNum.value){
+        //     finalBtn.removeAttribute('disabled','');
+        //     removeHidden('success-screen');
+        // }else{
+        //     finalBtn.disabled = true;
+        //     // location.reload();
+        //     alert('Invalid please check again');
+        // }
+        if(array > 0){
+            finalBtn.removeAttribute('disabled','');
+        }else{
+            if(array > 0 && phoneNum.value){
+                removeHidden('success-screen')
+            }else{
+                alert('Invalid please check again');
+            }
         }
-        else{
-            alert('Please fill up all input');
-        }
+        
+        
     })
 
     function addHidden(elementId){
@@ -89,10 +106,7 @@ for(const btn of btnAll){
         const element = document.getElementById(elementId);
         element.classList.remove('hidden');
     }
-    function selectElementById(elementId){
-        const element = document.getElementById(elementId);
-        element.value = 'number';
-    }
+    
 // !set innerText : 
 function setInnerTextById(elementId,value){
     document.getElementById(elementId).innerText = value;
